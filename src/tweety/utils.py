@@ -9,7 +9,7 @@ import subprocess
 import sys
 import uuid
 from io import BytesIO
-import magic
+import filetype
 from dateutil import parser as date_parser
 from urllib.parse import urlparse, parse_qs
 from .exceptions import AuthenticationRequired
@@ -19,7 +19,6 @@ import random
 import hashlib
 from typing import Union, List
 
-MIME_DETECTOR = magic.Magic(mime=True)
 GUEST_TOKEN_REGEX = re.compile("gt=(.*?);")
 MIGRATION_REGEX = re.compile(r"""(http(?:s)?://(?:www\.)?(twitter|x){1}\.com(/x)?/migrate([/?])?tok=[a-zA-Z0-9%\-_]+)+""", re.VERBOSE)
 MIME_TYPES = {
@@ -222,10 +221,10 @@ def check_if_file_is_supported(file):
 
     if isinstance(file, bytes):
         file = file
-        file_mime = MIME_DETECTOR.from_buffer(file)
+        file_mime = filetype.guess_mime(file)
     elif isinstance(file, BytesIO):
         file = file.getvalue()
-        file_mime = MIME_DETECTOR.from_buffer(file)
+        file_mime = filetype.guess_mime(file)
     elif str(file.__class__.__name__) == "Gif":
         file_extension = "gif"
         file_mime = MIME_TYPES.get(file_extension)
