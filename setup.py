@@ -1,4 +1,4 @@
-from setuptools import setup
+from distutils.core import setup
 
 install_requires = [
     "beautifulsoup4[lxml]~=4.12",
