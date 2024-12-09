@@ -1,4 +1,4 @@
-from distutils.core import setup
+from setuptools import setup, find_packages
 
 install_requires = [
     "beautifulsoup4[lxml]~=4.12",
@@ -13,7 +13,6 @@ install_requires = [
 
 setup(
     name='tweety-ns',
-    packages=['tweety', 'tweety.types', 'tweety.events', 'tweety.captcha'],
     version='2.0.7',
     license='MIT',
     description='An easy Twitter Scraper',
@@ -29,4 +28,6 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3'
     ],
+    packages=find_packages(where='src'),
+    package_dir={'': 'src'},
 )
