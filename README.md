@@ -1,19 +1,12 @@
-# tweety
+# tweetype
 Reverse Engineered Twitter Frontend API.
 
-[![Downloads](https://static.pepy.tech/personalized-badge/tweety-ns?period=total&units=international_system&left_color=orange&right_color=blue&left_text=Downloads)](https://pepy.tech/project/tweety-ns)
+## Difference from Original tweety-ns:
+While tweety-ns is a great tool for scraping Twitter data, this fork introduces a key change: replacing [python-magic](https://github.com/ahupp/python-magic) with [filetype](https://github.com/h2non/filetype.py) for better file type detection.
 
 ## Installation: 
 ```bash
-pip install tweety-ns
-```
-
-## Keep synced with latest fixes
-
-##### **Pip might not be always updated , so to keep everything synced.**
-
-```bash
-pip install https://github.com/mahrtayyab/tweety/archive/main.zip --upgrade 
+pip install https://github.com/FuseFairy/tweetype/archive/main.zip --upgrade 
 ```
 
 ## A Quick Example:

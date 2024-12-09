@@ -12,13 +12,13 @@ install_requires = [
 ]
 
 setup(
-    name='tweety-ns',
+    name='tweetype',
     version='2.0.7',
     license='MIT',
-    description='An easy Twitter Scraper',
-    author='Tayyab Kharl',
-    author_email='tayyabmahr@gmail.com',
-    url='https://github.com/mahrtayyab/tweety',
+    description='An easy Twitter Scraper (forked and modified by FuseFairy)',
+    author='Tayyab Kharl, FuseFairy',
+    author_email='tayyabmahr@gmail.com, dd8611706@gmail.com',
+    url='https://github.com/FuseFairy/tweetype',
     keywords=['TWITTER', 'TWITTER SCRAPE', 'SCRAPE TWEETS'],
     install_requires=install_requires,
     classifiers=[
